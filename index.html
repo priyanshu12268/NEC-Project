@@ -44,10 +44,6 @@
 
     <body>
         <div class="overlay"></div>
-
-        <div class="popup">
-            Hello
-        </div>
         <!-- Navigation Bar -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
             <a class="navbar-brand" href="#">Blood Donors</a>
@@ -140,6 +136,7 @@
                             <option value="O">O</option>
                         </select>
                     </div>
+                    <input type="hidden" name="_next" value="/?type=submit">
                     <button type="submit" class="btn btn-danger btn-lg">SUBMIT</button>
                 </form>
             </div>
@@ -167,6 +164,7 @@
                             <option value="O">O</option>
                         </select>
                     </div>
+                    <input type="hidden" name="_next" value="/?type=submit">
                     <button type="submit" class="btn btn-danger btn-lg">SUBMIT</button>
                 </form>
             </div>
@@ -176,19 +174,7 @@
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script>
-            function formSubmitted() {
-                alert("Form submitted successfully");
-                const email = document.getElementById("email");
-                const name = document.getElementById("name")
-                const bloodType = document.getElementById("bloodType");
-                const defaultOption = document.getElementById("select");
-                email.value = "";
-                bloodType.value = "select";
-                name.value = "";
-                return false;
-            }
-        </script>
+        <script src="/script.js"></script>
     </body>
 
 </html>
