@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation Website</title>
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="blood.css">
+    <style>
+        body {
+            background-image: url('https://media.istockphoto.com/id/1495001343/photo/medical-professional-wearing-a-lab-coat-and-gloves-working-in-a-laboratory.webp?b=1&s=170667a&w=0&k=20&c=81a9qzTKJvtvq31PB8zW92AkiYixIiM_O8KtJdRfG20=');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            background-color: #f8f9fa;
+            backdrop-filter: blur(6px);
+            /* Fallback color in case the image is not available */
+        }
+
+        .navbar {
+            background-color: #dc3545;
+        }
+
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #fff;
+        }
+
+        .navbar-toggler-icon {
+            background-color: #fff;
+        }
+
+        .py-5 {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div class="overlay"></div>
+
+        <div class="popup">
+            Hello
+        </div>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+            <a class="navbar-brand" href="#">Blood Donors</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#donor">Become a Donor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#receiver">Request Blood</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Landing Page Section -->
+
+
+
+
+
+        <section id="home" class="py-5 text-center">
+            <div class="container">
+                <h1 class="display-4" style="color: #0b006f; font-weight: 700;">Welcome to MITS Blood Donors</h1>
+                <p class="lead" style="color: #000000; font-weight: 400;">
+                    Welcome to MITS Blood Donors, where every heartbeat has the power to save lives – your gateway to a
+                    community driven by compassion, commitment, and the shared belief that a small act of kindness can
+                    make a profound difference.
+                </p>
+            </div>
+        </section>
+
+
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-light py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h2 class="display-4">About Us</h2>
+                        <p class="lead">
+                        <p>Welcome to MITS Blood Donors – a community driven by compassion, commitment, and the shared
+                            belief that a small act of kindness can save lives. Our blood donation initiative is a
+                            testament to the spirit of giving that defines our college community.</p>
+
+                        <p>Our Mission
+                            At MITS Blood Donors, our mission is clear: to contribute to the well-being of society by
+                            fostering a culture of voluntary blood donation. We aim to bridge the gap between those in
+                            need and those willing to make a difference. By promoting awareness and organizing blood
+                            donation drives, we aspire to create a campus where every student recognizes the power they
+                            hold to be a lifeline for others.</p>
+
+                        <h6>Thankyou for being the hope. </h6>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Donor Application Section -->
+        <section id="donor" class="py-5">
+            <div class="container">
+                <h2 class="display-4 text-center" style="color: #343333; font-weight: 700;">Donate Blood</h2>
+                <form onsubmit="return formSubmitted()" action="https://formsubmit.co/priyanshu12268@gmail.com" method="post" id="donor-application-form">
+                    <div class="form-group">
+                        <label for="name">Full Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Contact:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bloodType">Blood Type:</label>
+                        <select class="form-control" id="bloodType" name="bloodType" required>
+                            <option value="Select...">Select Blood Type</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="AB">AB</option>
+                            <option value="O">O</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-lg">SUBMIT</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Receiver Application Section -->
+        <section id="receiver" class="bg-light py-5">
+            <div class="container">
+                <h2 class="display-4 text-center" style="color: #444; font-weight: 700;">Request Blood</h2>
+                <form action="" method="post" id="blood-request-form">
+                    <div class="form-group">
+                        <label for="patientName">Patient Name:</label>
+                        <input type="text" class="form-control" id="patientName" name="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact Number:</label>
+                        <input type="tel" class="form-control" id="contact" name="contact" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="bloodType">Blood Type Required:</label>
+                        <select class="form-control" id="bloodType" name="bloodType" defaultValue="Select" required>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="AB">AB</option>
+                            <option value="O">O</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-danger btn-lg">SUBMIT</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Bootstrap JS and Popper.js scripts -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            function formSubmitted() {
+                alert("Form submitted successfully");
+                const email = document.getElementById("email");
+                const name = document.getElementById("name")
+                const bloodType = document.getElementById("bloodType");
+                const defaultOption = document.getElementById("select");
+                email.value = "";
+                bloodType.value = "select";
+                name.value = "";
+                return false;
+            }
+        </script>
+    </body>
+
+</html>
